@@ -1,4 +1,10 @@
 import sys
+import configparser
+
+import pathlib
+from appdirs import user_data_dir
+
+import pylablogger
 
 if sys.version_info[:2] >= (3, 8):
     # TODO: Import directly (no need for conditional) when `python_requires = >= 3.8`
@@ -14,3 +20,7 @@ except PackageNotFoundError:  # pragma: no cover
     __version__ = "unknown"
 finally:
     del version, PackageNotFoundError
+    dist_author = "SG"
+
+config = configparser.ConfigParser(defaults={})
+config_path = pathlib.Path(user_data_dir(pylablogger.dist_name, pylablogger.dist_author))
