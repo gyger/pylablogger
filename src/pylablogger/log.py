@@ -5,7 +5,7 @@ Entry Point for logging to Grafana using telegraf
 
  telegraf: https://github.com/influxdata/telegraf
  use uvx: https://docs.astral.sh/uv/guides/tools/
-     uvx --from git+https://github.com/gyger/pylablogger@2843b87 lablogger
+     uvx --from git+https://github.com/gyger/pylablogger@9ecb35c lablogger
 """
 
 import pickle
