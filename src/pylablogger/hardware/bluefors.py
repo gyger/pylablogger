@@ -77,7 +77,7 @@ def load_bluefors_singleday(logfolder, day, channels=[1, 2, 5, 6, 7, 8], fail_gr
                                     None, 'v17_switch', None, 'v18_switch', None, 'v19_switch', None, 'v20_switch', 
                                     None, 'v21_switch', None,'v22_switch', None, 'v23_switch', 
                                     None, 'turbo1_switch', None, 'turbo2_switch', None, 'scroll1_switch', None, 'scroll2_switch', 
-                                    None, 'compressor_switch', None, 'pulse_tube', 
+                                    None, 'compressor_switch', None, 'pulsetube_switch', 
                                     None, 'hs-still_switch', None, 'hs-mc_switch', None, 'ext_switch'
                                     ]        
 
