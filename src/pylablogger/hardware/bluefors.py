@@ -23,8 +23,10 @@ def load_bluefors_singleday(logfolder, day, channels=[1, 2, 5, 6, 7, 8], fail_gr
     # change day into a datetime format for easier manipulation
     if isinstance(day, str):
         day = datetime.date.fromisoformat(day)
+        if day.tzinfo is None:
+            day = day.replace(tzinfo=dateutil.tz.tzlocal())
 
-    date_string = day.strftime('%Y-%m-%d')[2:]
+    date_string = day.astimezone(dateutil.tz.tzlocal()).strftime('%Y-%m-%d')[2:]
     logfolder = Path(logfolder) / date_string
  
     # listing all the log files in the day folder
